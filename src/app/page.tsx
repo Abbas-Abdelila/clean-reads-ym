@@ -1,3 +1,5 @@
+import Hero from '@/components/Hero'
+import PostsList from '@/components/PostsList'
 import Trending from '@/components/Trending'
 import { Inter } from 'next/font/google'
 
@@ -7,7 +9,9 @@ export default function Home() {
   return (
    <>
    <div>
+      <Hero />
       <Trending />
+      <PostsList />
    </div>
    </>
   )
