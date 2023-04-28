@@ -45,7 +45,7 @@ const PostsList = () => {
                 How Generative AI is transforming the creative process for
                 wallpaper design
               </p>
-              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-3 cursor-pointer">
+              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
                 The generative design process for wallpaper design is a great
                 example of how AI can be used to augment human creativity. In a
                 time like this, when we are all stuck at home, it’s a great time
@@ -108,7 +108,7 @@ const PostsList = () => {
                   The cutie pie of the family in the cutest outfit
                 </p>
               </Link>
-              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-3 cursor-pointer">
+              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
                 This beautiful girl I met in my trip to Kilimanjaro mountain
                 Tanzania. She was so cute and adorable that I couldn't resist
                 taking a picture of her.
@@ -166,7 +166,7 @@ const PostsList = () => {
               <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
                 Is it worth moving to Vancouver from Toronto?
               </p>
-              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-3 cursor-pointer">
+              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
                 I have been living in Toronto for the past 5 years and I am now
                 thinking of moving to Vancouver. I have heard a lot of good
                 things about Vancouver and I am wondering if it is worth moving
@@ -214,21 +214,18 @@ const PostsList = () => {
             <div className="flex flex-col gap-2 w-[70%]">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/images/avatar.jpg"
+                  src="/images/fake-person-6.jpg"
                   className="rounded-full"
                   width={24}
                   height={36}
                   alt="profile pic"
                 />
-                <h1 className="text-sm font-semibold">Sarvar Musazade</h1>
+                <h1 className="text-sm font-semibold">Ali Wong</h1>
               </div>
               <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-                The problem-solver’s playbook: 17 questions to sharpen your
-                thinking
-              </p>
-              <p className="hidden md:block text-md text-light text-[#787878] md:line-clamp-2 cursor-pointer">
-                Stop falling in love with your problem, and definitely don’t
-                fall in love with your solution.
+                Will ChatGPT get rid of the typewriter equivalents of todays professions?              </p>
+              <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
+                Losing job and what have you can be depressing and stressful. I cannot stress on how important it is to have a good support system. I have been through this and I know how it feels. I am here to help you. I am here to listen to you.
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex gap-1 items-center">
@@ -260,7 +257,7 @@ const PostsList = () => {
 
             <div className="w-[30%] relative">
               <Image
-                src="/images/deepmind_image.jpg"
+                src="/images/vintage-typewriter.png"
                 fill
                 alt=""
               />
