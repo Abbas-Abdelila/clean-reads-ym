@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import PostsList from '@/components/PostsList'
+import HomeFeed from '@/components/HomeFeed'
 import Trending from '@/components/Trending'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +11,7 @@ export default function Home() {
    <div>
       <Hero />
       <Trending />
-      <PostsList />
+      <HomeFeed />
    </div>
    </>
   )

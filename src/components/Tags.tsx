@@ -1,15 +1,7 @@
-import useScrollPosition from './PostsList'
-
-
-
-const RightSide = () => {
-
-  const scrollPosition = useScrollPosition();
-  const fixedClass = Number(scrollPosition) > 1080 ? 'fixed' : '';
-
+const Tags = () => {
   return (
-    <div className={`flex flex-col w-full md:w-[35%] order-first md:order-last mt-12 ${fixedClass} top-0 right-0`}>
-      <h1 className="font-semibold text-[16px] mb-5">
+    <>
+      <h1 className="font-semibold text-[16px] mb-5 py-4">
         Discover more of what matters to you
       </h1>
       <div className="flex flex-wrap gap-2  border-slate-300 pb-10">
@@ -32,8 +24,8 @@ const RightSide = () => {
           Web Development
         </p>
       </div>
-    </div>
+    </>
   );
 };
 
-export default RightSide;
+export default Tags;
