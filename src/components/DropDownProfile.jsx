@@ -21,9 +21,28 @@ const DropDownProfile = () => {
           />
         </Link>
         <button onClick={() => setIsOpen(!isOpen)}>
-          <ArrowDropDownIcon />
+          <ArrowDropDownIcon className="text-xl" />
         </button>
       </div>
+      {isOpen && (
+        <div className="w-[250px] top-[55px] left-[-154px] h-[170px] absolute bg-slate-50 rounded-sm transition-shadow shadow-sm duration-100">
+          <h1 className="text-center mb-4 font-medium mt-3">
+            Get started on Medium
+          </h1>
+          <ul className="flex justify-center items-center flex-col space-y-3 w-full">
+            <li className="w-[80%]">
+              <button className="px-3 pt-1 pb-[6px] bg-[#0F730C] rounded-full text-white  flex justify-center items-center font-normal w-full">
+                SignIn
+              </button>
+            </li>
+            <li className="w-[80%]">
+              <button className="px-3 pt-1 pb-[6px] text-black border rounded-full   flex justify-center items-center font-normal w-full">
+                SignUp
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
