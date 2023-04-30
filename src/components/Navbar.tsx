@@ -10,12 +10,14 @@ const Navbar = () => {
       <div className="bg-[#FCC017] border-b border-slate-900">
         <div className="px-3 md:px-20 h-[75px] flex justify-between">
           <div className="logo flex items-center">
+            <Link href="/">
             <Image
               src="/images/medium.png"
               height={40}
               width={200}
               alt="medium logo"
             />
+            </Link>
           </div>
           <div
             className={`flex items-center space-x-5 text-sm ${ethio.className}`}

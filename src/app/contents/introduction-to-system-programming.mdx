@@ -1,0 +1,126 @@
+# System Programming
+
+Class: BIL-308
+Created: October 16, 2020 1:26 AM
+Materials: System%20Programming%2057ec06b872b84aeea10a4aacfab3c72a/Hoover_Adam_-_System_programming_with_C_and_Unix-Pearson__Addison-Wesley_(2009_2010).pdf
+Reviewed: No
+Type: Lecture
+
+# Hafta-1
+
+System programming is the use of system tools during program development to save time and effort, access core functions of the operating system, promote standards, and facilitate program management. This text explores the concepts of system programming and lower-level data types with the goal of advancing the programming skill of the reader.
+
+Windows is designed to be easy to use for the typical user, but this comes at the cost of limited information on the system's inner workings and lack of modularity. In contrast, Unix and Linux are open source, modular, and highly configurable, making them attractive for students studying system operation.
+
+### The Three Tools
+
+1. Shell
+2. Text-editor
+3. Debugger
+
+Q. Why should we run a program in a terminal if we can just click on the icon?
+
+> The control and flexibility offered by command line arguments is often useful
+during program development and system administration.
+> 
+> 
+> For example, starting a word processor opens the program in full-screen mode (the program fills the entire screen), with an open blank page, and all options set to their defaults (bold is off; text is left- justified; font is Times Roman; etc.). Suppose one desired to start the word processor with some of those options changed? A shell provides for this through command line arguments. A command line argument is anything typed at the shell prompt after the name of the program to execute. It provides information about how the user wishes
+> to run the program.
+> 
+> >> program -help 
+> Gives all the arguments that are available when running that program. 
+> 
+
+The `alias` command in Unix is used to create a new name or command that can be used to represent a longer command or set of commands. This can be used to simplify complex commands, to make them easier to remember or type, or to reduce the amount of typing when running the same command multiple times. The `alias` command is often used in combination with other commands, such as `grep` or `sed`, to create a shorter and more readable command.
+
+### The *alias* command
+
+What does alias do in unix and show me its use case and why to use it?
+
+In Unix-like operating systems, an alias is a way to create a new name for a command or set of commands. Aliases can be used to simplify complex commands, shorten long commands, or make frequently used commands easier to remember.
+
+For example, you can create an alias for a long and complex command as follows:
+
+```bash
+alias ls='ls --color=auto'
+```
+
+Now, whenever you type "ls" in the terminal, it will run the **`ls --color=auto`** command. This can be useful for simplifying a command that you use frequently.
+
+Another use case is creating a short alias for a long command. For example, you can create an alias as follows:
+
+```bash
+alias ll='ls -l'
+```
+
+Now, whenever you type "ll" in the terminal, it will run the **`ls -l`** command. This can be useful for making a frequently used command easier to remember and quicker to type.
+
+It's important to note that aliases are specific to the current shell session, meaning that if you log out or open a new terminal window, the aliases will not be available. To make the aliases permanent, you'll need to add them to your shell's startup file, such as **`.bashrc`** or **`.bash_profile`**.
+
+> **Common shell internal commands.**
+
+alias → Create an alias
+cd → Change directory
+pwd → Print current working directory
+set → Give a shell variable a value
+which → Identify full path of program
+
+**Common System Program commands**
+
+grep →Search files for specific text
+ls → List files and their attributes
+man → Display manual (help) for command/program
+more → Display a text file using pausable scrolling
+time → Measure the running time of a program
+sort → Sort lines in a text fil
+> 
+
+> When compiling to debug we need to flag -g, this makes the compiler not optimized for running fast as a result the size is larger than the one just compiled with gcc filename.c
+> 
+
+### gcc filename.c  vs gcc -g filename.c
+
+```bash
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# gcc sum.c
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# ls -l a.out
+-rwxr-xr-x 1 root root 15952 Feb  9 07:12 a.out
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# gcc -g sum.c
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# ls -l a.out
+-rwxr-xr-x 1 root root 17216 Feb  9 07:12 a.out
+```
+
+### GCC compilation and use of GNU debugger
+
+1. Setup for execution. `-g` initializes the symbol table for debugging,
+`-o` allow to rename a.out compiled file to custom name.
+
+```bash
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# gcc -g -o sum sum.c
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# ./sum
+Sum = 29
+```
+
+2.  To start the debugger for the code.
+
+```bash
+root@DESKTOP-86SENMJ:~/Abbas/sys_prog examples# gdb sum
+GNU gdb (Ubuntu 12.0.90-0ubuntu1) 12.0.90
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from sum...
+(gdb) _ 
+```
+
+1. To add break point  🛑 at a specif point.

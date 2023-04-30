@@ -7,13 +7,6 @@ import { Post } from "./Post";
 const PostsList = () => {
   return (
     <>
-      {/* Left Side */}
-
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
       <Post />
 
       {/* Post 1 */}
@@ -27,12 +20,14 @@ const PostsList = () => {
               height={36}
               alt="profile pic"
             />
-            <h1 className="text-sm font-semibold">Ashley Bretford</h1>
+            <h1 className="text-sm font-semibold">Schauf Bammer</h1>
           </div>
-          <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-            How Generative AI is transforming the creative process for wallpaper
-            design
-          </p>
+          <Link href="posts/generative-ai">
+            <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
+              How Generative AI is transforming the creative process for
+              wallpaper design
+            </p>
+          </Link>
           <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
             The generative design process for wallpaper design is a great
             example of how AI can be used to augment human creativity. In a time
@@ -71,7 +66,7 @@ const PostsList = () => {
 
         <div className="w-[30%] relative">
           <Image
-            src="/images/forest-sunset.jpg"
+            src="/images/generative-ai.jpg"
             fill
             alt=""
           />
@@ -89,25 +84,26 @@ const PostsList = () => {
               height={36}
               alt="profile pic"
             />
-            <h1 className="text-sm font-semibold">Jane Paul</h1>
+            <h1 className="text-sm font-semibold">Au Chang</h1>
           </div>
-          <Link href="/blogs">
+          <Link href="/posts/make-the-string-great">
             <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-              The cutie pie of the family in the cutest outfit
+              Make The String Great
             </p>
           </Link>
           <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
-            This beautiful girl I met in my trip to Kilimanjaro mountain
-            Tanzania. She was so cute and adorable that I couldn't resist taking
-            a picture of her.
+            We will be solving the coding exercise make the string great in this
+            article. This is a Leetcode problem. You can find the link to the
+            problem here. The problem statement is given below. Given a string s
+            of lower and upper case English letters.
           </p>
           <div className="flex justify-between items-center">
             <div className="flex gap-1 items-center">
               <p className="text-light text-[#787878] text-sm">
-                Jun 10 · 11 min read ·
+                Feb 19 · 11 min read ·
               </p>
-              <span className="hidden md:block text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
-                Mountains
+              <span className="hidden md:flex  text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
+                Coding
               </span>
             </div>
 
@@ -131,7 +127,7 @@ const PostsList = () => {
 
         <div className="w-[30%] relative">
           <Image
-            src="/images/beautiful-girl.jpg"
+            src="/images/medium-circles-logo.png"
             fill
             alt=""
           />
@@ -143,29 +139,32 @@ const PostsList = () => {
         <div className="flex flex-col gap-2 w-[70%]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/fake-person-3.jpg"
+              src="/images/abbas-profile.jpg"
               className="rounded-full"
               width={24}
               height={36}
               alt="profile pic"
             />
-            <h1 className="text-sm font-semibold">David Rosenberg</h1>
+            <h1 className="text-sm font-semibold">Abbas Abdelila</h1>
           </div>
-          <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-            Is it worth moving to Vancouver from Toronto?
-          </p>
+          <Link href="/posts/isim-tamlamasi-explained">
+            <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
+              Noun phrases (İsim tamlaması) in Turkish Explained
+            </p>
+          </Link>
           <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
-            I have been living in Toronto for the past 5 years and I am now
-            thinking of moving to Vancouver. I have heard a lot of good things
-            about Vancouver and I am wondering if it is worth moving there.
+            Noun phrases in Turkish are explained in this article. Noun phrases
+            are the phrases that are used to describe a noun. They are used to
+            give more information about the noun. In this article, we will be
+            looking at the different types of noun phrases in Turkish.
           </p>
           <div className="flex justify-between items-center">
             <div className="flex gap-1 items-center">
               <p className="text-light text-[#787878] text-sm">
-                Jun 10 · 11 min read ·
+                Aug 9 · 8 min read ·
               </p>
-              <span className="hidden md:block text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
-                Cities
+              <span className="hidden md:flex  text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
+                Turkish Language
               </span>
             </div>
 
@@ -189,7 +188,7 @@ const PostsList = () => {
 
         <div className="w-[30%] relative">
           <Image
-            src="/images/vancouver.jpg"
+            src="/images/isim-tamlamasi.jpg"
             fill
             alt=""
           />
@@ -201,31 +200,32 @@ const PostsList = () => {
         <div className="flex flex-col gap-2 w-[70%]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/fake-person-6.jpg"
+              src="/images/fake-person-4.jpg"
               className="rounded-full"
               width={24}
               height={36}
               alt="profile pic"
             />
-            <h1 className="text-sm font-semibold">Ali Wong</h1>
+            <h1 className="text-sm font-semibold">Mike Greenwood</h1>
           </div>
-          <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-            Will ChatGPT get rid of the typewriter equivalents of todays
-            professions?{" "}
-          </p>
+          <Link href="/posts/introduction-to-system-programming">
+            <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
+              Introduction To System Programming
+            </p>
+          </Link>
           <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
-            Losing job and what have you can be depressing and stressful. I
-            cannot stress on how important it is to have a good support system.
-            I have been through this and I know how it feels. I am here to help
-            you. I am here to listen to you.
+            In this article we will explore concepts of system programming and
+            how to use them in a real world application. We will be using C++ as
+            our programming language and we will be using the Linux operating
+            system.
           </p>
           <div className="flex justify-between items-center">
             <div className="flex gap-1 items-center">
               <p className="text-light text-[#787878] text-sm">
-                Jun 10 · 11 min read ·
+                Dec 02 · 9 min read ·
               </p>
-              <span className="hidden md:block text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
-                Product Strategy
+              <span className="hidden md:flex  text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
+                Coding
               </span>
             </div>
 
@@ -249,7 +249,7 @@ const PostsList = () => {
 
         <div className="w-[30%] relative">
           <Image
-            src="/images/vintage-typewriter.png"
+            src="/images/system-programming.jpg"
             fill
             alt=""
           />

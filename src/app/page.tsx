@@ -1,9 +1,14 @@
 import Hero from '@/components/Hero'
 import HomeFeed from '@/components/HomeFeed'
 import Trending from '@/components/Trending'
-import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+  title: 'Medium',
+  description: 'Discover Ideas and Stories that Matters to You',
+}
+
+
 
 export default function Home() {
   return (

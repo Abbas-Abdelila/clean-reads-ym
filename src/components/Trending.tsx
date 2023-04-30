@@ -34,7 +34,7 @@ const Trending = () => {
                 alt=""
                 className="rounded-full"
               />
-              <p className="text-sm">Ashley Bretford</p>
+              <p className="text-sm">Schauf Bammer</p>
             </div>
             <p className="text-lg font-semibold">The In's and Out's Real Estate Investment</p>
             <p className="text-slate-600 text-light text-sm">
@@ -54,7 +54,7 @@ const Trending = () => {
                 alt=""
                 className="rounded-full"
               />
-              <p className="text-sm">Schauf Bammer</p>
+              <p className="text-sm">Ashley Bretford</p>
             </div>
             <p className="text-lg font-semibold">EU's policy on Big Tech</p>
             <p className="text-slate-600 text-light text-sm">
@@ -74,7 +74,7 @@ const Trending = () => {
                 alt=""
                 className="rounded-full"
               />
-              <p className="text-sm">David Roseberg</p>
+              <p className="text-sm">Helena Roseberg</p>
             </div>
             <p className="text-lg font-semibold">The Economics of Football Leagues across the World</p>
             <p className="text-slate-600 text-light text-sm">
@@ -94,7 +94,7 @@ const Trending = () => {
                 alt=""
                 className="rounded-full"
               />
-              <p className="text-sm">Au Chang</p>
+              <p className="text-sm">Mike Greenwood</p>
             </div>
             <p className="text-lg font-semibold">How I Almost Got Fired From My Own Company</p>
             <p className="text-slate-600 text-light text-sm">
@@ -114,7 +114,7 @@ const Trending = () => {
                 alt=""
                 className="rounded-full"
               />
-              <p className="text-sm">Jane Paul</p>
+              <p className="text-sm">Au Chang</p>
             </div>
             <p className="text-lg font-semibold">Communication in Modern Times</p>
             <p className="text-slate-600 text-light text-sm">
