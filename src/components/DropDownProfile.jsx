@@ -5,8 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useState } from "react";
-const DropDownProfile = () => {
+import Modal from "./Modal";
+const DropDownProfile = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { handleRegister, open, handleLogin, type, handleClose } = props;
 
   return (
     <div className="relative">
@@ -31,11 +34,17 @@ const DropDownProfile = () => {
           </h1>
           <ul className="flex justify-center items-center flex-col space-y-3 w-full">
             <li className="w-[80%]">
-              <button className="px-3 pt-1 pb-[6px] bg-[#0F730C] rounded-full text-white  flex justify-center items-center font-normal w-full">
+              <button
+                onClick={handleLogin}
+                className="px-3 pt-1 pb-[6px] bg-[#0F730C] rounded-full text-white  flex justify-center items-center font-normal w-full"
+              >
                 SignIn
               </button>
             </li>
-            <li className="w-[80%]">
+            <li
+              onClick={handleRegister}
+              className="w-[80%]"
+            >
               <button className="px-3 pt-1 pb-[6px] text-black border rounded-full   flex justify-center items-center font-normal w-full">
                 SignUp
               </button>
@@ -43,6 +52,11 @@ const DropDownProfile = () => {
           </ul>
         </div>
       )}
+      <Modal
+        handleClose={handleClose}
+        open={open}
+        type={type}
+      />
     </div>
   );
 };
