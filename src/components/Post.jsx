@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { dateFormat } from "../util/dateFormat";
 
-export const Post = () => {
+export const Post = (props) => {
+  const { title, postId, readingTime, image, tags, content, createdAt, user } =
+    props.post;
+
+  const time = dateFormat(createdAt);
+
   return (
-    <div className="flex gap-[34px] w-[100%] mt-16 ">
-      <div className="flex flex-col gap-2 w-[70%]">
+    <div className="flex w-[100%] mt-16">
+      <div className="flex flex-col w-[70%] mx-2">
         <div className="flex items-center gap-2">
           <Image
             src="/images/abbas-profile.jpg"
@@ -13,29 +19,21 @@ export const Post = () => {
             height={36}
             alt="profile pic"
           />
-          <h1 className="text-sm font-semibold">Abbas Abdelila</h1>
+          <h1 className="text-sm font-semibold">{user?.username}</h1>
         </div>
         <Link href="/posts/how-to-get-started-with-learning-turkish">
           <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">
-            How To Get Started With Learning Turkish
+            {title}
           </p>
         </Link>
-        <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-2 cursor-pointer">
-          Turkish is a language that is spoken by over 80 million people in the
-          world. It is the official language of Turkey and is also spoken in
-          Cyprus, Greece, and other parts of Europe. If you want to learn
-          Turkish, there are many ways to do so. You can take classes at your
-          local community college or university, hire a private tutor, or use an
-          online course like Duolingo. In this blog post, we will discuss how
-          you can get started with learning Turkish!
+        <p className="hidden md:block text-md text-light text-[#787878] md:!line-clamp-4 cursor-pointer">
+          {content}
         </p>
         <div className="flex justify-between items-center">
           <div className="flex gap-1 items-center">
-            <p className="text-light text-[#787878] text-sm">
-              Jun 10 · 11 min read ·
-            </p>
-            <span className="hidden md:flex  text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
-              Language Learning
+            <p className="text-light text-[#787878] text-sm">{`${time} · ${readingTime} min read ·`}</p>
+            <span className="hidden md:flex mt-1 text-[#787878] text-sm border rounded-3xl px-2 py-[2px] bg-[#F2F3F2] cursor-pointer hover:bg-[#d9dbdb]">
+              {tags.length > 0 ? tags[0].name : "Default"}
             </span>
           </div>
 
@@ -57,10 +55,11 @@ export const Post = () => {
         </div>
       </div>
 
-      <div className="w-[30%] relative">
+      <div className="object-contain max-w-[200px] min-w-[200px]">
         <Image
           src="/images/learn-turkish.jpg"
-          fill
+          width={300}
+          height={300}
           alt=""
         />
       </div>
