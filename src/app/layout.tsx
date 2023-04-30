@@ -1,5 +1,6 @@
-import Navbar from '@/components/Navbar'
+import UserNavbar from '@/components/UserNavbar'
 import './globals.css'
+
 
 
 export const metadata = {
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
+       
+        <UserNavbar />
         {children}
+    
       </body>
     </html>
   )
