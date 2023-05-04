@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Trending = () => {
   return (
@@ -26,17 +27,21 @@ const Trending = () => {
         <div className="flex gap-6 mb-8">
           <p className="text-3xl text-slate-300 ">01</p>
           <div className="flex flex-col py-2 gap-2">
-            <div className="flex gap-3 items-center">
-              <Image
-                width={25}
-                height={30}
-                src="/images/fake-person-1.jpg"
-                alt=""
-                className="rounded-full"
-              />
-              <p className="text-sm">Schauf Bammer</p>
-            </div>
-            <p className="text-lg font-semibold">The In's and Out's Real Estate Investment</p>
+            <Link href="/users/schauf-bammer">
+              <div className="flex gap-3 items-center">
+                <Image
+                  width={25}
+                  height={30}
+                  src="/images/Schauf-Bammer.jpg"
+                  alt=""
+                  className="rounded-full"
+                />
+                <p className="text-sm">Schauf Bammer</p>
+              </div>
+            </Link>
+            <p className="text-lg font-semibold">
+              The In's and Out's Real Estate Investment
+            </p>
             <p className="text-slate-600 text-light text-sm">
               Jan 19 - 15 mins read
             </p>
@@ -46,16 +51,18 @@ const Trending = () => {
         <div className="flex gap-6">
           <p className="text-3xl text-slate-300 ">02</p>
           <div className="flex flex-col py-2 gap-2">
-            <div className="flex gap-3 items-center">
-              <Image
-                width={25}
-                height={30}
-                src="/images/fake-person-2.jpg"
-                alt=""
-                className="rounded-full"
-              />
-              <p className="text-sm">Ashley Bretford</p>
-            </div>
+            <Link href="/users/ashley-bretford">
+              <div className="flex gap-3 items-center">
+                <Image
+                  width={25}
+                  height={30}
+                  src="/images/Ashley-Bretford.jpg"
+                  alt=""
+                  className="rounded-full"
+                />
+                <p className="text-sm">Ashley Bretford</p>
+              </div>
+            </Link>
             <p className="text-lg font-semibold">EU's policy on Big Tech</p>
             <p className="text-slate-600 text-light text-sm">
               Apr 13 - 7 mins read
@@ -66,17 +73,21 @@ const Trending = () => {
         <div className="flex gap-6">
           <p className="text-3xl text-slate-300 ">03</p>
           <div className="flex flex-col py-2 gap-2">
-            <div className="flex gap-3 items-center">
-              <Image
-                width={25}
-                height={30}
-                src="/images/fake-person-3.jpg"
-                alt=""
-                className="rounded-full"
-              />
-              <p className="text-sm">Helena Roseberg</p>
-            </div>
-            <p className="text-lg font-semibold">The Economics of Football Leagues across the World</p>
+            <Link href="/users/helena-roseberg">
+              <div className="flex gap-3 items-center">
+                <Image
+                  width={25}
+                  height={30}
+                  src="/images/Helena-Roseberg.jpg"
+                  alt=""
+                  className="rounded-full"
+                />
+                <p className="text-sm">Helena Roseberg</p>
+              </div>
+            </Link>
+            <p className="text-lg font-semibold">
+              The Economics of Football Leagues across the World
+            </p>
             <p className="text-slate-600 text-light text-sm">
               Mar 20 - 9 mins read
             </p>
@@ -86,19 +97,23 @@ const Trending = () => {
         <div className="flex gap-6">
           <p className="text-3xl text-slate-300 ">04</p>
           <div className="flex flex-col py-2 gap-2">
-            <div className="flex gap-3 items-center">
-              <Image
-                width={25}
-                height={30}
-                src="/images/fake-person-4.jpg"
-                alt=""
-                className="rounded-full"
-              />
-              <p className="text-sm">Mike Greenwood</p>
-            </div>
-            <p className="text-lg font-semibold">How I Almost Got Fired From My Own Company</p>
+            <Link href="/users/mike-greenwood">
+              <div className="flex gap-3 items-center">
+                <Image
+                  width={25}
+                  height={30}
+                  src="/images/Mike-Greenwood.jpg"
+                  alt=""
+                  className="rounded-full"
+                />
+                <p className="text-sm">Mike Greenwood</p>
+              </div>
+            </Link>
+            <p className="text-lg font-semibold">
+              How I Almost Got Fired From My Own Company
+            </p>
             <p className="text-slate-600 text-light text-sm">
-              Aug 06  - 7 mins read
+              Aug 06 - 7 mins read
             </p>
           </div>
         </div>
@@ -106,17 +121,21 @@ const Trending = () => {
         <div className="flex gap-6">
           <p className="text-3xl text-slate-300 ">05</p>
           <div className="flex flex-col py-2 gap-2">
-            <div className="flex gap-3 items-center">
-              <Image
-                width={25}
-                height={30}
-                src="/images/fake-person-5.jpg"
-                alt=""
-                className="rounded-full"
-              />
-              <p className="text-sm">Au Chang</p>
-            </div>
-            <p className="text-lg font-semibold">Communication in Modern Times</p>
+            <Link href="/users/au-chang">
+              <div className="flex gap-3 items-center">
+                <Image
+                  width={25}
+                  height={30}
+                  src="/images/Au-Chang.jpg"
+                  alt=""
+                  className="rounded-full"
+                />
+                <p className="text-sm">Au Chang</p>
+              </div>
+            </Link>
+            <p className="text-lg font-semibold">
+              Communication in Modern Times
+            </p>
             <p className="text-slate-600 text-light text-sm">
               Jun 03 - 3 mins read
             </p>

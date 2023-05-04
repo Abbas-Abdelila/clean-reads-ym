@@ -1,14 +1,23 @@
 import { Post } from "@/components/Post";
-import TagHeader from "./TagHeader";
-import TopWriters from "./TopWriters";
+import TagHeader from "../TagHeader";
+import TopWriters from "../TopWriters";
+import { splitAndJoin } from "@/utils/TagDecipher";
+type Params = {
+  params: {
+    tag: string;
+  };
+};
 
-const TagsPage = () => {
+
+
+const TagsPage = ({ params: { tag } }: Params) => {
+  const tagName = splitAndJoin(tag);
   return (
     <div className="px-20 flex justify-between space-x-8 md:divide-x-[1px]">
       <div className="w-full md:w-[65%] order-first">
         <div className="flex flex-col gap-10">
           <div className="flex-col">
-            <TagHeader />
+            <TagHeader tag={tagName} />
             <div className="flex items-center space-x-4 my-4">
               <button className="border bg-green-500 text-white py-1 px-3 rounded-2xl">
                 Follow
@@ -26,12 +35,12 @@ const TagsPage = () => {
               <p className="py-4 px-2 cursor-pointer">This Year</p>
             </div>
           </div>
-          <Post />
+          <Post imageName="Schauf-Bammer.jpg" userName="Schauf Bammer" />
           {/* add line break with gray color */}
           <div className="border-b border-gray-200"></div>
-          <Post />
+          {/* <Post /> */}
           <div className="border-b border-gray-200"></div>
-          <Post />
+          <Post imageName="abbas-profile.jpg" userName="Abbas Abdelila"/>
           <div className="border-b border-gray-200"></div>
         </div>
       </div>
@@ -47,7 +56,7 @@ const TagsPage = () => {
             <div className="hidden sm:flex space-x-4 items-center">
               <div className="hidden profile-picture md:flex">
                 <Image
-                  src="/images/fake-person-4.jpg"
+                  src="/images/Mike-Greenwood.jpg"
                   width={50}
                   height={50}
                   alt="profile picture"

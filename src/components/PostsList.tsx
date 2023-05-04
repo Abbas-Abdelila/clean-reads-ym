@@ -7,14 +7,14 @@ import { Post } from "./Post";
 const PostsList = () => {
   return (
     <>
-      <Post />
+      <Post imageName={"abbas-profile.jpg"} userName={"Abbas Abdelila"}/>
 
       {/* Post 1 */}
       <div className="flex gap-[34px] w-[100%] mt-16 ">
         <div className="flex flex-col gap-2 w-[70%]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/fake-person-1.jpg"
+              src="/images/Schauf-Bammer.jpg"
               className="rounded-full"
               width={24}
               height={36}
@@ -78,7 +78,7 @@ const PostsList = () => {
         <div className="flex flex-col gap-2 w-[70%]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/fake-person-5.jpg"
+              src="/images/Au-Chang.jpg"
               className="rounded-full"
               width={24}
               height={36}
@@ -200,7 +200,7 @@ const PostsList = () => {
         <div className="flex flex-col gap-2 w-[70%]">
           <div className="flex items-center gap-2">
             <Image
-              src="/images/fake-person-4.jpg"
+              src="/images/Mike-Greenwood.jpg"
               className="rounded-full"
               width={24}
               height={36}

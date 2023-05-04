@@ -5,7 +5,7 @@ const UserProfile = () => {
     <div className="hidden sm:flex space-x-4 items-center">
       <div className="hidden profile-picture md:flex">
         <Image
-          src="/images/fake-person-4.jpg"
+          src="/images/Mike-Greenwood.jpg"
           width={50}
           height={50}
           alt="profile picture"

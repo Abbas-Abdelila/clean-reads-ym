@@ -1,19 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Post = () => {
+type PostProps = {  
+  imageName: string;
+  userName: string;
+};
+
+export const Post = ( { imageName, userName } : PostProps ) => {
   return (
     <div className="flex gap-[34px] w-[100%] mt-16 ">
       <div className="flex flex-col gap-2 w-[70%]">
         <div className="flex items-center gap-2">
           <Image
-            src="/images/abbas-profile.jpg"
+            src={`/images/${imageName}`}
             className="rounded-full"
             width={24}
             height={36}
             alt="profile pic"
           />
-          <h1 className="text-sm font-semibold">Abbas Abdelila</h1>
+          <h1 className="text-sm font-semibold">{userName}</h1>
         </div>
         <Link href="/posts/how-to-get-started-with-learning-turkish">
           <p className="leading-[20px] md:leading-[28px] text-[16px] md:text-[22px] font-bold text-slate-800 space-y-[2px] cursor-pointer">

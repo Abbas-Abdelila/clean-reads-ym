@@ -1,39 +1,46 @@
 "use client";
-
 import React, { useState } from "react";
 import { Modal, Switch } from "antd";
 import { Post } from "@/components/Post";
 import Image from "next/image";
-const UserProfile: React.FC = () => {
+import { splitAndJoinSpace, splitAndJoinHyphen } from "@/utils/UserDecipher";
+
+type Params = { params: { username: string } };
+
+const UserProfile = ({ params: { username } }: Params) => {
   const [profilePicture, setProfilePicture] = useState(false);
-  const [userName, setUserName] = useState(false);
   const [password, setPassword] = useState(false);
   const [visibility, setVisibility] = useState(false);
 
+  const userName = splitAndJoinSpace(username);
+  const image = splitAndJoinHyphen(username);
   return (
     <div className="px-20 flex justify-between space-x-8 md:divide-x-[1px] mt-16">
       <div className="w-full md:w-[65%] order-first">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-3xl font-semibold items-start">Abbas Abdelila</h1>
+          <h1 className="text-3xl font-semibold items-start">{userName}</h1>
           <div className="flex items-center space-x-8 border-b text-gray-600 border-gray-200 mt-8">
             <p className="py-4 px-2 border-b border-gray-950 cursor-pointer">
               Home
             </p>
             <p className="py-4 px-2 cursor-pointer">About</p>
           </div>
-          <Post />
+          <Post
+            imageName={`${image}.jpg`}
+            userName={userName}
+          />
         </div>
       </div>
       <div className="w-full hidden sm:flex  md:w-[35%] order-last md:fixed md:top-[100px] md:right-0 md:h-screen">
         <div className="profile flex flex-col space-y-3 ml-8">
           <Image
-            src="/images/abbas-profile.jpg"
+            src={`/images/${image}.jpg`} // Route of the image file
             height="88"
             width={88}
             alt="Profile Picture"
             className="rounded-full"
           />
-          <h1 className="text-[16px] font-semibold">Abbas Abdelila</h1>
+          <h1 className="text-[16px] font-semibold">{userName}</h1>
           <p className="text-[14px] text-slate-500 text-light">Entrepreneur</p>
           <p className="text-[14px] text-slate-500 text-light">
             Founder of{" "}
@@ -69,13 +76,17 @@ const UserProfile: React.FC = () => {
             footer={null}
           >
             <div className="flex flex-col justify-start space-y-4 my-20">
-              <h1 className="text-2xl font-semibold justify-start">
-                Image Url
-              </h1>
-              <input
-                placeholder="image url..."
-                className="py-2 px-4 border border-green-300 rounded-md focus:border-green-500 focus:outline-none"
-              />
+              <div className="flex justify-center items-center cursor-pointer">
+                <div className="h-[130px] w-[130px] flex justify-center items-center rounded-full bg-gray-100 border border-green-500">
+                  <p className="text-3xl text-light ">+</p>
+                </div>
+              </div>
+              <div className="flex justify-center items-center">
+                <button className="bg-green-500 text-white py-2 px-4 rounded-md w-24 mb-10">
+                  Upload
+                </button>
+              </div>
+
               <button className="bg-green-500 text-white py-2 px-4 rounded-md">
                 Change Profile Picture
               </button>
@@ -120,10 +131,12 @@ const UserProfile: React.FC = () => {
             footer={null}
           >
             <div className="flex justify-center items-center space-x-4 my-20">
-              <h1 className="text-2xl font-semibold justify-start">
-                Public
-              </h1>
-              <Switch defaultChecked autoFocus className="bg-gray-400" />
+              <h1 className="text-2xl font-semibold justify-start">Public</h1>
+              <Switch
+                defaultChecked
+                autoFocus
+                className="bg-gray-400"
+              />
             </div>
           </Modal>
         </div>
