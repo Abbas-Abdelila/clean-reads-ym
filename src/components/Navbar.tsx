@@ -46,8 +46,17 @@ const Navbar = () => {
             >
               Write
             </Link>
-            <div onClick={() => setVisible(true)}> Sign In </div>
-            <div className="bg-black text-white py-2 px-4 rounded-full hover:bg-green-700 transition ease-in cursor-pointer">
+            <div
+              className="cursor-pointer"
+              onClick={() => setVisible(true)}
+            >
+              {" "}
+              Sign In{" "}
+            </div>
+            <div
+              className="bg-black text-white py-2 px-4 rounded-full hover:bg-green-700 transition ease-in cursor-pointer"
+              onClick={() => setOpen(true)}
+            >
               Get Started
             </div>
 

@@ -2,6 +2,8 @@ import { Post } from "@/components/Post";
 import TagHeader from "../TagHeader";
 import TopWriters from "../TopWriters";
 import { splitAndJoin } from "@/utils/TagDecipher";
+import SortPosts from "../SortPosts";
+
 type Params = {
   params: {
     tag: string;
@@ -11,7 +13,11 @@ type Params = {
 
 
 const TagsPage = ({ params: { tag } }: Params) => {
+  
+  
   const tagName = splitAndJoin(tag);
+  
+
   return (
     <div className="px-20 flex justify-between space-x-8 md:divide-x-[1px]">
       <div className="w-full md:w-[65%] order-first">
@@ -26,14 +32,42 @@ const TagsPage = ({ params: { tag } }: Params) => {
                 Start Writing
               </button>
             </div>
-            <div className="flex items-center space-x-8 border-b text-gray-600 border-gray-200 mt-8">
-              <p className="py-4 px-2 border-b border-gray-950 cursor-pointer">
+            <SortPosts />
+            {/* <div className="flex items-center space-x-8 border-b text-gray-600 border-gray-200 mt-8">
+              <p className={`py-4 px-2 border-gray-950 cursor-pointer ${trending ? 'border-b' : ''}`}
+              onClick={() =>{
+                setTrending(true);
+                setLatest(false);
+                setBest(false);
+                setThisYear(false);
+              }}>
                 Trending
               </p>
-              <p className="py-4 px-2 cursor-pointer">Latest</p>
-              <p className="py-4 px-2 cursor-pointer">Best</p>
-              <p className="py-4 px-2 cursor-pointer">This Year</p>
-            </div>
+              <p className="py-4 px-2 cursor-pointer"
+              onClick={() =>{
+                setTrending(false);
+                setLatest(true);
+                setBest(false);
+                setThisYear(false);
+              }}
+              >Latest</p>
+              <p className="py-4 px-2 cursor-pointer"
+              onClick={() => {
+                setTrending(false);
+                setLatest(false);
+                setBest(true);
+                setThisYear(false);
+              }}
+              >Best</p>
+              <p className="py-4 px-2 cursor-pointer"
+              onClick={() => {
+                setTrending(false);
+                setLatest(false);
+                setBest(false);
+                setThisYear(true);
+              }}
+              >This Year</p>
+            </div> */}
           </div>
           <Post imageName="Schauf-Bammer.jpg" userName="Schauf Bammer" />
           {/* add line break with gray color */}
