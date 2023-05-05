@@ -23,7 +23,7 @@ const ProfileHeader = () => {
             <h1>Abbas Abdelila</h1>
             <div className="flex gap-3">
               <p className="text-light text-[#787878] text-[14px]">
-                Jun 10 · 11 min read ·
+                Apr 28 · 6 min read ·
               </p>
               <span className="text-blue-400 text-[14px]">Listen</span>
             </div>

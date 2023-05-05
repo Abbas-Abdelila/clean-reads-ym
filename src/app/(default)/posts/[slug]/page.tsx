@@ -17,7 +17,7 @@ export function generateMetadata({ params: { slug } }: Params): Metadata {
 }
 
 const PostPage = ({ params: { slug } }: Params): JSX.Element => {
-  const Content = dynamic(() => import(`@/app/contents/${slug}.mdx`), {
+  const Content = dynamic(() => import(`@/app/(default)/contents/${slug}.mdx`), {
     ssr: false,
   });
 

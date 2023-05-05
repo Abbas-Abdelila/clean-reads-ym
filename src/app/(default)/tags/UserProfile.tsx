@@ -14,7 +14,7 @@ const UserProfile = () => {
       </div>
       <div className="sm:flex flex-col items-start">
         <p className="text-sm sm:text-md md:text-lg font-semibold">Au Chang</p>
-        <p className="hidden text-sm xl:flex md:text-lg  text-gray-600 font-light">
+        <p className="hidden text-sm xl:flex md:text-lg  text-gray-600 font-light !line-clamp-1">
           I love observing and writing
         </p>
       </div>

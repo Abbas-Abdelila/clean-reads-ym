@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-switch-checked{
+    background:#35ac35 !important;
+ }
