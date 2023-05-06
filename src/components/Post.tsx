@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type PostProps = {  
+type PostProps = {
   imageName: string;
   userName: string;
 };
 
-export const Post = ( { imageName, userName } : PostProps ) => {
+export const Post = ({ imageName, userName }: PostProps) => {
   return (
-    <div className="flex gap-[34px] w-[100%] mt-16 ">
+    <div className="flex gap-[34px] w-[100%] my-16 ">
       <div className="flex flex-col gap-2 w-[70%]">
         <div className="flex items-center gap-2">
           <Image
@@ -65,8 +65,9 @@ export const Post = ( { imageName, userName } : PostProps ) => {
       <div className="w-[30%] relative">
         <Image
           src="/images/learn-turkish.jpg"
-          fill
-          alt=""
+          alt="ChatGPT image"
+          height={128}
+          width={192}
         />
       </div>
     </div>

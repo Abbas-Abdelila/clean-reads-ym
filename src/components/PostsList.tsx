@@ -7,7 +7,10 @@ import { Post } from "./Post";
 const PostsList = () => {
   return (
     <>
-      <Post imageName={"abbas-profile.jpg"} userName={"Abbas Abdelila"}/>
+      <Post
+        imageName={"abbas-profile.jpg"}
+        userName={"Abbas Abdelila"}
+      />
 
       {/* Post 1 */}
       <div className="flex gap-[34px] w-[100%] mt-16 ">
@@ -67,8 +70,9 @@ const PostsList = () => {
         <div className="w-[30%] relative">
           <Image
             src="/images/generative-ai.jpg"
-            fill
-            alt=""
+            alt="ChatGPT image"
+            height={128}
+            width={192}
           />
         </div>
       </div>
@@ -126,10 +130,11 @@ const PostsList = () => {
         </div>
 
         <div className="w-[30%] relative">
-          <Image
+        <Image
             src="/images/medium-circles-logo.png"
-            fill
-            alt=""
+            alt="ChatGPT image"
+            height={128}
+            width={192}
           />
         </div>
       </div>
@@ -187,10 +192,11 @@ const PostsList = () => {
         </div>
 
         <div className="w-[30%] relative">
-          <Image
+        <Image
             src="/images/isim-tamlamasi.jpg"
-            fill
-            alt=""
+            alt="ChatGPT image"
+            height={128}
+            width={192}
           />
         </div>
       </div>
@@ -248,10 +254,11 @@ const PostsList = () => {
         </div>
 
         <div className="w-[30%] relative">
-          <Image
+        <Image
             src="/images/system-programming.jpg"
-            fill
-            alt=""
+            alt="ChatGPT image"
+            height={128}
+            width={192}
           />
         </div>
       </div>

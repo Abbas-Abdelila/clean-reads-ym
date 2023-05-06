@@ -15,7 +15,7 @@ const UserProfile = ({ params: { username } }: Params) => {
   const userName = splitAndJoinSpace(username);
   const image = splitAndJoinHyphen(username);
   return (
-    <div className="px-20 flex justify-between space-x-8 md:divide-x-[1px] mt-16">
+    <div className="px-5 md:px-10 lg:px-20 flex justify-between space-x-8 md:divide-x-[1px] mt-16">
       <div className="w-full md:w-[65%] order-first">
         <div className="flex flex-col space-y-4">
           <h1 className="text-3xl font-semibold items-start">{userName}</h1>
@@ -31,7 +31,7 @@ const UserProfile = ({ params: { username } }: Params) => {
           />
         </div>
       </div>
-      <div className="w-full hidden sm:flex  md:w-[35%] order-last md:fixed md:top-[100px] md:right-0 md:h-screen">
+      <div className="w-full hidden md:flex  md:w-[35%] order-last md:fixed md:top-[100px] md:right-0 md:h-screen">
         <div className="profile flex flex-col space-y-3 ml-8">
           <Image
             src={`/images/${image}.jpg`} // Route of the image file
@@ -81,6 +81,25 @@ const UserProfile = ({ params: { username } }: Params) => {
                   <p className="text-3xl text-light ">+</p>
                 </div>
               </div>
+
+              <label className="w-full flex flex-col items-center px-4 py-6 bg-gray-100 text-gray-700 rounded-lg shadow-md tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-green-500">
+                <svg
+                  className="w-8 h-8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M17 2H3a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2zM8 9a1 1 0 011-1h2a1 1 0 010 2H9a1 1 0 01-1-1zm7 6H5a1 1 0 01-1-1V7h14v7a1 1 0 01-1 1z" />
+                </svg>
+                <span className="mt-2 text-base leading-normal">
+                  Select a Photo
+                </span>
+                <input
+                  type="file"
+                  className="hidden"
+                />
+              </label>
+
               <div className="flex justify-center items-center">
                 <button className="bg-green-500 text-white py-2 px-4 rounded-md w-24 mb-10">
                   Upload

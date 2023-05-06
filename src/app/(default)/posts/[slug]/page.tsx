@@ -23,15 +23,15 @@ const PostPage = ({ params: { slug } }: Params): JSX.Element => {
 
   return (
     <>
-      <div className={`px-20 flex gap-20 my-16 divide-x`}>
-        <div className="w-[65%]">
+      <div className="sm:px-5 lg:px-20 lg:flex space-x-20 my-16">
+        <div className="lg:w-[65%] lg:border-r border-gray-200 lg:pr-8">
           <ProfileHeader />
-          <article className="prose lg:prose-md max-w-4xl">
+          <article className="px-3 prose lg:prose-md max-w-4xl sm:px-4">
             <Content />
           </article>
         </div>
 
-        <div className="w-[35%] fixed right-0 flex flex-col px-8">
+        <div className="hidden lg:w-[35%] lg:fixed right-0 lg:flex flex-col px-8">
           <div className="profile flex flex-col space-y-3">
             <Image
               src="/images/abbas-profile.jpg"
