@@ -15,6 +15,10 @@ const UserProfile = ({ params: { username } }: Params) => {
   const userName = splitAndJoinSpace(username);
   const image = splitAndJoinHyphen(username);
   return (
+    <>
+    <head>
+      <title>{`${userName}'s Profile`}</title>
+    </head>
     <div className="px-5 md:px-10 lg:px-20 flex justify-between space-x-8 md:divide-x-[1px] mt-16">
       <div className="w-full md:w-[65%] order-first">
         <div className="flex flex-col space-y-4">
@@ -161,6 +165,7 @@ const UserProfile = ({ params: { username } }: Params) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

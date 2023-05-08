@@ -134,13 +134,31 @@ const Navbar = () => {
               footer={null}
             >
               {/* Sign up to medium form */}
-              <div className="flex flex-col space-y-3 h-[400px]">
+              <div className="flex flex-col space-y-3">
                 <div className="flex justify-center items-center my-4">
                   <Image
                     src="/images/medium.png"
                     width={200}
                     height={100}
                     alt="medium logo"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="email">First Name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    className="border border-gray-300 rounded-md focus:border-green-500 focus:outline-none transition ease-in duration-150 px-2 py-1"
+                  />
+                </div>
+                <div className="flex flex-col space-y-2">
+                  <label htmlFor="email">Last Name</label>
+                  <input
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    className="border border-gray-300 rounded-md focus:border-green-500 focus:outline-none transition ease-in duration-150 px-2 py-1"
                   />
                 </div>
                 <div className="flex flex-col space-y-2">
