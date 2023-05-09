@@ -2,6 +2,7 @@ import ProfileHeader from "@/components/ProfileHeader";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+import LikeCommentShare from "@/components/LikeCommentShare";
 
 type Params = {
   params: {
@@ -21,6 +22,7 @@ const PostPage = ({ params: { slug } }: Params): JSX.Element => {
     ssr: false,
   });
 
+
   return (
     <>
       <div className="sm:px-5 lg:px-20 lg:flex space-x-20 my-16">
@@ -29,6 +31,9 @@ const PostPage = ({ params: { slug } }: Params): JSX.Element => {
           <article className="px-3 prose lg:prose-md max-w-4xl sm:px-4">
             <Content />
           </article>
+          <div>
+            <LikeCommentShare />
+          </div>
         </div>
 
         <div className="hidden lg:w-[35%] lg:fixed right-0 lg:flex flex-col px-8">
