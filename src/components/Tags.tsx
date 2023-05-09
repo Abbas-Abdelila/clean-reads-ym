@@ -1,4 +1,6 @@
 import Link from "next/link";
+import TagFooter from "./TagFooter";
+
 
 const Tags = () => {
   return (
@@ -39,6 +41,7 @@ const Tags = () => {
           </p>
         </Link>
       </div>
+      <TagFooter />
     </>
   );
 };
