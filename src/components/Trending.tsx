@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Trending = () => {
   return (
-    <div className="flex flex-col gap-2 w-full mt-16 mb-10 border-b pb-3 sm:px-5 md:px-10 lg:px-20">
+    <div className="flex flex-col gap-2 w-full mt-16 mb-10 border-b pb-3 px-4 sm:px-5 md:px-10 lg:px-20">
       <div className="flex gap-4 items-center mt-8">
         <span className="border border-slate-600 rounded-full  text-slate-900">
           <svg
