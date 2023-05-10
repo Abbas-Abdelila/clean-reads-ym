@@ -5,7 +5,9 @@ import { Post } from "@/components/Post";
 import Image from "next/image";
 import { splitAndJoinSpace, splitAndJoinHyphen } from "@/utils/UserDecipher";
 
+
 type Params = { params: { username: string } };
+
 
 const UserProfile = ({ params: { username } }: Params) => {
   const [profilePicture, setProfilePicture] = useState(false);
@@ -14,6 +16,8 @@ const UserProfile = ({ params: { username } }: Params) => {
 
   const userName = splitAndJoinSpace(username);
   const image = splitAndJoinHyphen(username);
+  
+
   return (
     <>
     <head>

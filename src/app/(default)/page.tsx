@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import HomeFeed from '@/components/HomeFeed'
+import PostMenu from '@/components/PostMenu'
 import Trending from '@/components/Trending'
 import type { Metadata } from 'next'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Trending />
       <HomeFeed />
+      
    </div>
    </>
   )

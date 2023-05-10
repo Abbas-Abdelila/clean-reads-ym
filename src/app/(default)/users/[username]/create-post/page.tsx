@@ -18,6 +18,7 @@ const CreatePost = () => {
 
   return (
     <>
+    <div>
       <h1 className="text-center text-3xl font-semibold text-slate-800 mt-16">
         Create a new Post
       </h1>
@@ -86,6 +87,7 @@ const CreatePost = () => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
